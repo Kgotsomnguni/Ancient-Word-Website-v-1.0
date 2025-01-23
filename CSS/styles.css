@@ -1,0 +1,948 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* **** Styling for the header **** */
+header {
+  background-color: #fff;
+  color: #333;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 22px solid #ff6600; /* Orange border for a touch of logo color */
+  overflow: visible;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure the header is above other content */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header img.logo {
+  max-height: 50px;
+}
+
+/* **** Styling for the navigation **** */
+nav {
+  display: flex;
+  gap: 60px;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+  font-size: 1.2em;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ff6600;
+  border-bottom: 2px solid #ff6600;
+}
+/* Navigation dropdown...*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 2px; /* Space between button text and arrow */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333; /* Arrow color */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 100%; /* Position the dropdown below the button */
+  left: 0;
+  text-align: left;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f4f4f4;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #ff6600;
+}
+
+
+.hero {
+  position: relative;
+  background-image: url("/images/gal9.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.services {
+  padding: 20px;
+  text-align: center;
+}
+
+.services h2 {
+  margin-top: 0;
+}
+
+.service-item {
+  margin: 20px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  position: relative;
+}
+
+.service-image {
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-image img:hover,
+.service-image img:focus {
+  transform: scale(1.05);
+}
+
+.service-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.service-text h3,
+.service-text p {
+  margin: 0;
+}
+
+.info-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.info-section h2 {
+  margin-top: 0;
+}
+
+.info-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-images img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.info-images img:hover,
+.info-images img:focus {
+  transform: scale(1.05);
+}
+
+.contact {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover,
+.contact button:focus {
+  background-color: #cc5200;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.partners {
+  text-align: center;
+}
+
+.partner-logos {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+}
+
+.partner-logos img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover,
+.partner-logos img:focus {
+  transform: scale(1.05);
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid #ff6600;
+  margin: 30px 0;
+}
+
+.tagline {
+  font-size: 0.2em;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+}
+
+/* new changes */
+.c1 {
+  background-color: #cc3300;
+  position: relative;
+}
+.c2 {
+  background-color: #336699;
+}
+.c3 {
+  background-color: #339966;
+}
+.c1,
+.c2,
+.c3 {
+  margin: 2.5%;
+}
+.cat {
+  display: inline-block;
+  width: 28%;
+  height: 200px;
+  object-position: 25px;
+  color: white;
+  padding: 15px;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+
+  position: relative; /* Allows absolute positioning of hover content */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+.cat:hover .hover-content {
+  display: block; /* Show content on hover */
+}
+
+.hover-text {
+  position: relative;
+  padding: 50px;
+}
+
+.cat h1 {
+  padding: 50px 0;
+}
+.services {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Pop-up initially hidden */
+.course-pop {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 55%; /* Adjust as needed */
+  left: 0;
+  background-color: grey; /* Pop-up background color */
+  opacity: 80%;
+  padding: 15px;
+
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Pop-up content styling */
+.course-pop ul {
+  list-style: circle;
+  padding: 0;
+  margin: 2%;
+}
+
+.course-pop li {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white; /* Adds the dividing line */
+}
+
+.course-pop a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover over the text to show the pop-up */
+/* Show pop-up when hovering over text or the pop-up itself */
+.cat:hover .course-pop,
+.hover-text:hover + .course-pop {
+  display: block;
+}
+.course-pop li:last-child {
+  border-bottom: none;
+  margin-bottom: -20px;
+}
+
+/*about page styling */
+.banner {
+  background-image: url("/images/herosection2.jpg");
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.about-page .banner {
+  background-image: url("/images/gal9.jpg");
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.about-page .banner-text h1 {
+  font-size: 3em;
+  background: rgba(91, 90, 90, 0.5);
+  padding: 20px;
+  text-align: center;
+}
+
+.about-page .container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about-page .about-us {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.about-page .about-us .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-page .about-left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-page .about-left h2 {
+  color: #ff6600;
+}
+
+.about-page .about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.about-page .about-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-page .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.about-page .vision-mission {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.about-page .vision-mission .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-page .box {
+  background-color: white;
+  padding: 20px;
+  width: 48%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .box h3 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.about-page .trainings-booking {
+  padding: 50px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.about-page .trainings-booking h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.about-page .contact-us {
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+}
+
+.about-page .contact-us h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.about-page .contact-us p {
+  margin-bottom: 10px;
+}
+
+.about-page .contact-us .btn {
+  background-color: #ff6600;
+}
+.container-flex {
+  display: flex;
+  flex: row;
+  margin-bottom: 80px;
+}
+
+/* Booking page styling */
+.booking-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #f4f4f4;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-section h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+.booking-button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-button:hover,
+.booking-button:focus {
+  background-color: #cc5200;
+}
+
+/* Responsive Design */
+
+/* custom styling 1 */
+@media (max-width:980px)
+{
+  
+  .info-images{
+   
+    padding: 2px;
+    gap:15px;
+    
+  }
+  .info-images img {
+    width: 270px;
+    height: 200px;
+    border-radius: 5px;
+   
+    
+  }
+}
+/* custom styling 2 */
+@media (max-width:884px)
+{
+  .info-images img {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+   
+    
+  }
+}
+/* custom styling 3 */
+@media (max-width:824px)
+{
+  #nav-menu .close-btn {
+    display: none;
+    
+  }
+  .info-images img {
+    width: 200px;
+    height: 170px;
+    border-radius: 5px;
+   
+  }
+}
+
+/* 1024 design */
+@media (max-width:1086px){
+  #nav-menu .close-btn {
+    display: none;
+    
+  }
+  .cat {
+    display: flexbox;
+    flex-direction: row;
+    width: 25%;
+    height: 200px;
+    margin: 1.5%;
+    
+  }
+  .cat ,h1{
+font-size: 1.1em;
+  }
+  .services{
+    padding:10px;
+
+  }
+}
+
+
+
+@media (max-width:864px) {
+  #nav-menu .close-btn {
+    display: none;
+    
+  }
+  .services{
+    padding:10px;
+
+  }
+  .service-item {
+    margin: 10px;
+    display: flex;
+    width: 20%;
+    flex-direction: row;
+   
+  }
+  .cat {
+    display: flexbox;
+    flex-direction: row;
+    width: 25%;
+    height: 200px;
+    
+  }
+  nav a {
+    font-size: 1.1rem;
+  }
+
+  .dropdown-content {
+    min-width: 400px;
+    left: 0;
+    text-align:start;
+  }
+
+}
+@media (max-width:768px){
+  #nav-menu .close-btn {
+    display: none;
+    
+  }
+    .cat, h1{
+      font-size: 0.9em;
+    }
+    nav a {
+      font-size: 0.9em;
+    }
+    .dropbtn {
+      font-size: 0.9em;
+    }
+    .cat {
+      height: 160px;
+      
+    }
+  }
+
+  @media (max-width:725px)
+  {
+    #nav-menu .close-btn {
+      display: none;
+      
+    }
+    .dropdown-content {
+      min-width: 370px;
+      left: 0;
+      text-align:start;
+    }
+  }
+
+  @media (max-width:740px){
+    #nav-menu .close-btn {
+      display: none;
+      
+    }
+    .cat {
+      width: 70%;
+      height: 160px;
+      
+    }
+    .course-pop{
+      z-index: 10;
+      width: 94%;
+    }
+    
+    .info-images img {
+      width: 180px;
+      height: 150px;
+      border-radius: 5px;
+     
+    }
+  }
+  
+  @media (max-width:678px){
+    #nav-menu .close-btn {
+      display: none;
+      
+    }
+    nav {
+      gap: 30px;
+    }
+    .dropdown-content {
+      min-width: 300px;
+      left: 0;
+      text-align:start;
+    }
+    
+  }
+  @media (max-width:614px){
+    
+    #nav-menu .close-btn {
+      display: none;
+      
+    }
+    .info-images{
+      gap: 8px;
+    }
+    .info-images img {
+      width: 150px;
+      height: 130px;
+      border-radius: 5px;
+     
+    }
+  }
+
+  @media (max-width:582px){
+    
+    #nav-menu .close-btn {
+      display: none;
+      
+    }
+    nav {
+      gap: 20px;
+    }
+    .dropdown-content {
+      min-width: 100%;
+      left: 0;
+      text-align:start;
+    }
+    
+  }
+  @media (max-width:542px){
+    
+    nav {
+      gap: 10px;
+    }
+    
+  }
+  /* CSS for the hamburger menu */
+  .menu-icon {
+    display: none;
+    
+    
+    cursor: pointer;
+    z-index: 999;  /* Make sure it's on top of other elements */
+    position: relative; /* Ensure it stays in place */
+}
+
+.menu-icon .line {
+    width: 22px;              /* Adjust the width of the lines */
+    height: 3px;              /* Adjust the height (thickness) of the lines */
+    background-color: rgb(0, 0, 0);  /* Set the lines' color to black */
+    margin: 1px 0;            /* Space between the lines */
+    transition: 0.3s;         /* Smooth transition for any animations */
+    display: block;           /* Ensure each line is visible */
+}
+
+
+/* Close button inside the nav */
+#nav-menu .close-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* Dim background when menu is open */
+.dim-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+/* Media query for smaller screens (max-width: 500px) */
+@media (max-width: 500px) {
+  .dropdown{
+    width: 100%;
+  }
+  .dropdown-content {
+    min-width: 100%;
+    left: 0;
+    text-align:start;
+  }
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    
+    cursor: pointer;
+    z-index: 999;  /* Make sure it's on top of other elements */
+    position: relative; /* Ensure it stays in place */
+}
+  nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items:flex-start;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(100%);
+      opacity: 80%;
+      padding-left: 20px;
+      padding-top: 80px;
+  }
+  
+
+  nav.active {
+      display: flex;
+      transform: translateX(0);
+  }
+
+  .menu-icon {
+      display: flex;
+  }
+
+  .close-btn {
+      display: block;
+  }
+
+  .dim-background.active {
+      display: block;
+  }
+
+  .info-images{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .info-images img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+   
+  }
+
+}

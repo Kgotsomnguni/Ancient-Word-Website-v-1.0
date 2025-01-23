@@ -1,0 +1,319 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 22px solid #ff6600; /* Orange border for a touch of logo color */
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the header is above other content */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header img.logo {
+    max-height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 60px;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+}
+
+nav a:hover, nav a:focus {
+    color: #ff6600;
+    border-bottom: 2px solid #ff6600;
+}
+/* Navigation dropdown...*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 2px; /* Space between button text and arrow */
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333; /* Arrow color */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    top: 100%; /* Position the dropdown below the button */
+    left: 0;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #ff6600;
+}
+
+.hero {
+    position: relative;
+    background-image: url('/images/gal9.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.services {
+    padding: 20px;
+    text-align: center;
+}
+
+.services h2 {
+    margin-top: 0;
+}
+
+.service-item {
+    margin: 20px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    position: relative;
+}
+
+.service-image {
+    position: relative;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-image img:hover, .service-image img:focus {
+    transform: scale(1.05);
+}
+
+.service-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.service-text h3, .service-text p {
+    margin: 0;
+}
+
+.info-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.info-section h2 {
+    margin-top: 0;
+}
+
+.info-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-images {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-images img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.info-images img:hover, .info-images img:focus {
+    transform: scale(1.05);
+}
+
+.contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover, .contact button:focus {
+    background-color: #cc5200;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.partners {
+    text-align: center;
+}
+
+.partner-logos {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+}
+
+.partner-logos img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover, .partner-logos img:focus {
+    transform: scale(1.05);
+}
+
+.section-divider {
+    border: none;
+    border-top: 2px solid #ff6600;
+    margin: 30px 0;
+}
+
+.tagline {
+    font-size: 0.2em;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+}

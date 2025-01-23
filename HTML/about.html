@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ancient Word Pty Ltd - About Us</title>
+  <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+
+  <!-- Header (remains unchanged) -->
+  <header>
+    <div class="logo-container">
+        <img src="/images/OurLogo.jpg" alt="Ancient Word Logo" class="logo"> <!-- Placeholder for company logo -->
+        <h1>Ancient Word</h1>
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <nav id="nav-menu">
+        <div class="close-btn" onclick="toggleMenu()">✖</div> <!-- Close button inside the nav -->
+        <a href="/HTML/index.html">Home</a>
+        <div class="dropdown">
+            <a href="#services" class="dropbtn">Courses <span class="arrow"></span></a>
+            <div class="dropdown-content">
+                <a href="/HTML/Courses/Samtrac-course.html">SAMTRAC (SAFETY MANAGEMENT)</a>
+                <a href="/HTML/Courses/certified-complaince-course.html">CERTIFIED COMPLIANCE OFFICER (CCO)</a>
+                <a href="/HTML/Courses/iso-environmental-management.html">ISO INTEGRATED ENVIRONMENTAL MANAGEMENT</a>
+                <a href="/HTML/Courses/iso-ohs-management.html">ISO INTEGRATED OHS MANAGEMENT</a>
+                <a href="/HTML/Courses/iso-management systems.html">ISO INTEGRATED MANAGEMENT SYSTEMS</a>
+                <a href="/HTML/Courses/environmental-auditing-and-compliance.html">ENVIRONMENTAL AUDITING AND COMPLIANCE</a>
+            </div>
+        </div>
+        <a href="/HTML/about.html">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Background dim overlay -->
+<div class="dim-background" onclick="toggleMenu()"></div>
+
+  <!-- Full-width Banner -->
+  <section class="about-page banner">
+    <div class="banner-text">
+      <h1>Be fruitful and multiply</h1>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-page about-us">
+    <div class="container">
+      <div class="about-left">
+        <h2>About Us</h2>
+        <p>
+          Ancient Word (Pty) Ltd is a premier provider of specialised training solutions, dedicated to addressing the evolving needs of professionals in critical management fields. With 12 years of experience, we are committed to delivering exceptional educational experiences that enhance expertise and skills.
+        </p>
+        <p>
+          Our training sessions, held online and at the distinguished Hotel 224 in Pretoria, offer a conducive environment for effective learning and development. We are proud to employ expert facilitators who bring extensive experience and specialised knowledge, ensuring an engaging and informative experience.
+        </p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="about-right">
+        <img src="/images/hotel224-busroom.jpg" alt="Hotel 224 in Pretoria">
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision and Mission Section -->
+  <section class="about-page vision-mission">
+    <div class="container-flex">
+      <div class="box">
+        <h3>Vision</h3>
+        <p>
+          To advance sustainable excellence by ensuring compliance and imparting essential skills across all critical areas of management.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Mission</h3>
+        <p>
+          Delivering cutting-edge training programmes that equip professionals with the expertise required to excel across diverse management disciplines.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainings and Booking Section -->
+  <section class="about-page trainings-booking">
+    <div class="container">
+      <h2>Trainings</h2>
+      <p>
+        At Ancient Word (Pty) Ltd, we offer a range of integrated short courses and programmes designed to equip attendees with practical skills for daily application. Our meticulously crafted training sessions are tailored to meet the latest industry standards.
+      </p>
+      <a href="#" class="btn">View Courses</a>
+
+      <h2>Booking</h2>
+      <p>
+        Booking your place in our training sessions is simple and can be done online. Complete the booking form or contact us via email for assistance.
+      </p>
+      <a href="mailto:admin@aword.co.za" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <div class="about-page contact-us">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> 073 730 7665</p>
+      <p><strong>WhatsApp:</strong> 067 652 8937</p>
+      <p><strong>Email:</strong> admin@aword.co.za</p>
+      <a href="https://wa.me/27676528937" class="btn">Contact on WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Original Footer -->
+  <footer>
+    <div class="footer-content">
+
+        <div class="partners">
+            <h4>Professional bodies</h4>
+            <div class="partner-logos">
+                
+                <img src="/images/Saiosh logo.png" alt="Partner 2">
+
+
+            </div>
+        </div>
+    </div>
+    <p>&copy; 2024 Ancient Word (Pty) Ltd. All rights reserved.</p>
+    <div class="tagline">
+        Developed by <strong>PFTech Solutions</strong>
+    </div>
+</footer>
+<script src="/javascript/script.js"></script>
+</body>
+</html>
